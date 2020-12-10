@@ -20,7 +20,7 @@ The [Claudi et al. 2020 paper](LINK TO BE EDITED) describes [the brainrender sof
 
 
 ## Installation
-**This code was written in python==3.6.3 and brainrender==2.0.0.3**.
+**This code was written in python==3.6.3 and brainrender==2.0.0.4, Installing this package will force brainrender to have version 2.0.0.4. If you don't want that to happen, don't use `pip install .`**. 
 
 The easiest way to run the scripts in this repository is by cloning and installing it:
 ```
@@ -35,3 +35,5 @@ This will install all the requirements. This code was written for `brainrender` 
 The scripts in `scripts/figure_*.py` can be run to create each of the figures. In each of those scripts there's a function that takes care of creating each of the figure's panels. 
 
 If you installed this repository with `pip install .`, you can run the `scripts/figure_*.py` script (from your terminal, with the anaconda environment where this repository was installed active)  with: `make_figure N` where N is a number in (1, 2, 3) specifying which figure should be made.
+
+To make videos, you can run `make_video N` in your terminal.

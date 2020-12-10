@@ -1,3 +1,31 @@
+from vedo import Box
+
+def root_box(scene):
+    '''
+        Creates a transparent box around the root, 
+        to ensure that camera movements are smooth
+        during video creation
+    '''
+    pos = scene.root.centerOfMass()
+    bounds = scene.root.bounds()
+    bds = [
+        bounds[1] - bounds[0],
+        bounds[3] - bounds[2],
+        bounds[5] - bounds[4],
+    ]
+
+    scene.add(
+        Box(
+            pos=[pos[0] - 1300, pos[1] - 500, pos[2]],
+            length=bds[0],
+            width=bds[1],
+            height=bds[2],
+        ).alpha(0),
+        names="box",
+        br_classes="box",
+    )
+
+
 # ---------------------------------- Cameras --------------------------------- #
 
 f1p1 = {

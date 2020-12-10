@@ -1,6 +1,6 @@
 from setuptools import setup, find_namespace_packages
 
-requirements = ['brainrender==2.0.0.3', 'ibllib']
+requirements = ['brainrender==2.0.0.4', 'ibllib']
 
 setup(
     name='brainrender_figures',
@@ -12,6 +12,7 @@ setup(
     entry_points={
         'console_scripts': [
             'make_figure = scripts.__init__:make',
+            'make_video = scripts.__init__:make_video',
         ],
     },
     url="https://github.com/brainglobe/brainrender_paper",

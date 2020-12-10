@@ -121,14 +121,14 @@ def make_zfish_morphologies():
 
 
 def make():
-    # print(f'[{orange}]Making first panel')
-    # make_mouse_cells()
+    print(f'[{orange}]Making first panel')
+    make_mouse_cells()
 
-    # print(f'[{orange}]Making second panel')
-    # make_zfish_cells()
+    print(f'[{orange}]Making second panel')
+    make_zfish_cells()
 
-    # print(f'[{orange}]Making third panel')
-    # make_mouse_morphologies()
+    print(f'[{orange}]Making third panel')
+    make_mouse_morphologies()
 
     print(f'[{orange}]Making fourth panel')
     make_zfish_morphologies()
