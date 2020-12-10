@@ -1,3 +1,3 @@
 from scripts import make_video
 
-make_video(4)
+make_video(1)
