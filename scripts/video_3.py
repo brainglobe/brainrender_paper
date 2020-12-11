@@ -51,7 +51,7 @@ def make():
 
 
     # ----------------------------- create animation ----------------------------- #
-    anim = Animation(scene, "videos", "video_three", size=None)
+    anim = Animation(scene, "videos", "Video3", size=None)
 
     # Specify camera pos and zoom at some key frames`
     anim.add_keyframe(0, camera="frontal", zoom=1.5, callback=slc, duration=10)

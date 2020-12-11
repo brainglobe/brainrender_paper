@@ -11,7 +11,7 @@ from brainrender.actors import Points
 from brainrender.actors.streamlines import make_streamlines
 from brainrender.atlas_specific import get_streamlines_for_region
 
-from myterial import blue_grey, blue_grey_dark
+from myterial import blue_grey_dark, blue_grey
 
 from scripts.utils import root_box
 
@@ -23,7 +23,7 @@ cam = {
 }
 
 # ---------------------------- keyframes callbacks --------------------------- #
-
+streams = get_streamlines_for_region("RSP")
 
 def slce(scene, framen, totframes):
     root, pts, rsp, th, box, roots, rsps, ths = scene.actors
@@ -59,10 +59,10 @@ def make():
     coords = pd.read_hdf("./data/cell-detect-paper-cells.h5")
     scene.add(Points(coords[["x", "y", "z"]].values, radius=30))
 
-    rsp = scene.add_brain_region("RSP", alpha=0.3, color=blue_grey_dark)
-    scene.add_brain_region("TH", alpha=0.3, color=blue_grey_dark)
+    rsp = scene.add_brain_region("RSP", alpha=0.05, color=blue_grey_dark)
+    scene.add_brain_region("TH", alpha=0.1, color=blue_grey_dark)
     root_box(scene)
-    streams = get_streamlines_for_region("RSP")
+    
 
     # ----------------------------- create animation ----------------------------- #
 
@@ -86,4 +86,4 @@ def make():
     anim.add_keyframe(9.5, camera=cam, zoom=3.5)
 
     # Make videos
-    anim.make_video(duration=10, fps=5)
+    anim.make_video(duration=10, fps=30)

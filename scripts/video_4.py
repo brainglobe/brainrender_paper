@@ -6,7 +6,7 @@ from oneibl.onelight import ONE
 import numpy as np
 from random import choices
 
-
+from myterial import blue_grey_dark
 
 cam0 = {
     "pos": (7264, 2794, 23463),
@@ -63,7 +63,7 @@ def make():
         scene.add_silhouette(spheres, lw=LW)
 
 
-    scene.add_brain_region("TH", "MOs", alpha=0.6)
+    scene.add_brain_region("TH", "MOs", color=blue_grey_dark, alpha=0.1)
 
     # --------------------------------- callback --------------------------------- #
 
@@ -103,7 +103,7 @@ def make():
 
 
     # --------------------------------- Animation -------------------------------- #
-    anim = Animation(scene, "videos", "video_four", size=None)
+    anim = Animation(scene, "videos", "Video4", size=None)
     fps = 30
 
     anim.add_keyframe(
